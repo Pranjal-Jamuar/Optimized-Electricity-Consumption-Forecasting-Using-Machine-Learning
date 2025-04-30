@@ -21,6 +21,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
 
+import warnings
+warnings.filterwarnings("ignore", message=".*This axis already has a converter set.*")
+
+
 #import preprocessing/modeling/error metric packages
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import make_column_transformer
