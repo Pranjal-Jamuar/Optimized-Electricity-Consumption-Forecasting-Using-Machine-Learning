@@ -225,7 +225,7 @@ error_metrics(y_train, linreg_red.predict(X_train_red), model_name = 'simple lin
 
 # errors metrics for a baseline forecast (that simply repeats the values from the previous year)
 #error_metrics(y_true, y_pred, model_name = None)
-error_metrics(y_test, df_features.loc[X_test.index.shift(-8760, freq='H'), 'total load actual'],
+error_metrics(y_test, df_features.loc[X_test.index.shift(-8760, freq='h'), 'total load actual'],
               model_name='Baseline forecast (repeat of previous year) (test)')
 
 
@@ -233,7 +233,7 @@ error_metrics(y_test, df_features.loc[X_test.index.shift(-8760, freq='H'), 'tota
 
 
 # plot y_pred and y-true for baseline year over year
-plot_ts_pred_true(y_pred = df_features.loc[X_test.index.shift(-8760, freq='H'), 'total load actual'], y_true = y_test, 
+plot_ts_pred_true(y_pred = df_features.loc[X_test.index.shift(-8760, freq='h'), 'total load actual'], y_true = y_test, 
                   model_name = "baseline forecast that repeats the value from the previous year")
 
 
